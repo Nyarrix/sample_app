@@ -4,8 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'therubyracer'
 gem 'rails', '~> 5.2.0'
+gem 'therubyracer'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', :group => [:development, :test]
 gem 'pg', :group => :production
@@ -58,6 +58,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+	gem 'sqlite3'
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
